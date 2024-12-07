@@ -18,6 +18,8 @@ class TM():
         self.states = [[["", self.headers.start, self.tape]]]
         self.curr_state = self.states[-1]
 
+    # Run the TM until it reaches a halting state or a maximum number of steps/transitions
+    # 0=Success, 1=Failure, 2=Max Steps, 3=Max Transitions
     def run(self, steps=None, max_transitions=None):
         counter = 0
         transitions = 0
@@ -37,6 +39,7 @@ class TM():
             if max_transitions and transitions > max_transitions:
                 return 3, transitions
     
+    # Simulate one step of the TM, generating all possible new states
     def step(self):
         new_states = []
         for state in self.states[-1]:
@@ -59,7 +62,8 @@ class TM():
             return None
         self.curr_state = new_states
         return new_states
-    
+
+# A simple class to keep track of the headers of the TM
 class Headers:
     def __init__(self, name, state_list, tape_chars, all_chars, start, accept, reject):
         self.name = ','.join(name)
@@ -74,6 +78,7 @@ class Headers:
         return f"Name: {self.name}\nStates: {self.state_list}\nTape Characters: {self.tape_chars}\nAll Characters: {self.all_chars}\nStart State: {self.start}\nAccept State: {self.accept}\nReject State: {self.reject}"
     
 ## METHODS
+# Generate the new state of the TM based on the transition and the current state
 def gen_new_state(tr, symbol, state):
     before = state[0]
     after = tr[2]+state[2][1:]
@@ -95,6 +100,7 @@ def gen_new_state(tr, symbol, state):
         
     return [before, new_state, after]
     
+# Read the TM from a CSV file
 def readTM(filename):
     transitions = []
     with open(filename, 'r') as file:
