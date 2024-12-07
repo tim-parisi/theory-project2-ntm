@@ -1,0 +1,11 @@
+TM Name: a plus
+[['', 'q1', 'aaaa']]
+[['a', 'q1', 'aaa'], ['a', 'q2', 'aaa']]
+[['aa', 'q1', 'aa'], ['aa', 'q2', 'aa'], ['a', 'qreject', 'aaa']]
+[['aaa', 'q1', 'a'], ['aaa', 'q2', 'a'], ['aa', 'qreject', 'aa']]
+[['aaaa', 'q1', '_'], ['aaaa', 'q2', '_'], ['aaa', 'qreject', 'a']]
+[['aaaa', 'qreject', '_'], ['aaa', 'q3', 'a']]
+Initial string: aaaa
+String accepted at a depth of 5
+Total transitions simulated: 13
+Average determinism: 2.6

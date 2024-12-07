@@ -1,0 +1,14 @@
+TM Name: a*b*c* Deterministic
+[['', 'q0', 'aabbccc']]
+[['a', 'q1', 'abbccc']]
+[['aa', 'q1', 'bbccc']]
+[['aab', 'q2', 'bccc']]
+[['aabb', 'q2', 'ccc']]
+[['aabbc', 'q3', 'cc']]
+[['aabbcc', 'q3', 'c']]
+[['aabbccc', 'q3', '_']]
+[['aabbccc_', 'qacc', '_']]
+Initial string: aabbccc
+String accepted at a depth of 8
+Total transitions simulated: 8
+Average determinism: 1.0

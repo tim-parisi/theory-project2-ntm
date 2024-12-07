@@ -1,0 +1,11 @@
+TM Name: a plus DTM
+[['', 'q1', 'aaaa']]
+[['a', 'q1', 'aaa']]
+[['aa', 'q1', 'aa']]
+[['aaa', 'q1', 'a']]
+[['aaaa', 'q1', '_']]
+[['aaaaa', 'q2', '_']]
+Initial string: aaaa
+String accepted at a depth of 5
+Total transitions simulated: 5
+Average determinism: 1.0

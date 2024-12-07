@@ -1,0 +1,14 @@
+TM Name: a*b*c* Nondeterministic
+[['', 'q0', 'aabbccc']]
+[['a', 'q0', 'abbccc'], ['a', 'q1', 'abbccc'], ['a', 'q2', 'abbccc'], ['a', 'q3', 'abbccc']]
+[['aa', 'q0', 'bbccc'], ['aa', 'q1', 'bbccc'], ['aa', 'q2', 'bbccc'], ['aa', 'q3', 'bbccc'], ['a', 'qrej', 'abbccc'], ['a', 'qrej', 'abbccc'], ['a', 'qrej', 'abbccc']]
+[['aab', 'q1', 'bccc'], ['aab', 'q2', 'bccc'], ['aab', 'q3', 'bccc'], ['aab', 'q1', 'bccc'], ['aab', 'q2', 'bccc'], ['aab', 'q3', 'bccc'], ['aa', 'qrej', 'bbccc'], ['aa', 'qrej', 'bbccc']]
+[['aabb', 'q1', 'ccc'], ['aabb', 'q2', 'ccc'], ['aabb', 'q3', 'ccc'], ['aab', 'qrej', 'bccc'], ['aab', 'qrej', 'bccc'], ['aabb', 'q1', 'ccc'], ['aabb', 'q2', 'ccc'], ['aabb', 'q3', 'ccc'], ['aab', 'qrej', 'bccc'], ['aab', 'qrej', 'bccc']]
+[['aabb', 'qrej', 'ccc'], ['aabbc', 'q2', 'cc'], ['aabbc', 'q3', 'cc'], ['aabb', 'qrej', 'ccc'], ['aabb', 'qrej', 'ccc'], ['aabbc', 'q2', 'cc'], ['aabbc', 'q3', 'cc'], ['aabb', 'qrej', 'ccc']]
+[['aabbcc', 'q2', 'c'], ['aabbcc', 'q3', 'c'], ['aabbc', 'qrej', 'cc'], ['aabbcc', 'q2', 'c'], ['aabbcc', 'q3', 'c'], ['aabbc', 'qrej', 'cc']]
+[['aabbccc', 'q2', '_'], ['aabbccc', 'q3', '_'], ['aabbcc', 'qrej', 'c'], ['aabbccc', 'q2', '_'], ['aabbccc', 'q3', '_'], ['aabbcc', 'qrej', 'c']]
+[['aabbccc', 'qrej', '_'], ['aabbccc_', 'qacc', '_'], ['aabbccc', 'qrej', '_'], ['aabbccc_', 'qacc', '_']]
+Initial string: aabbccc
+String accepted at a depth of 8
+Total transitions simulated: 53
+Average determinism: 6.625
